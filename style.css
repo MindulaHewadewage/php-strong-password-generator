@@ -1,0 +1,53 @@
+/* reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* generics */
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+/* utils */
+.large-container {
+  margin: 0 auto;
+  max-width: 1400px;
+}
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.small-container {
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+.xs-container {
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+/* main */
+main {
+  height: 200px;
+  border-radius: 10px;
+  background-color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
