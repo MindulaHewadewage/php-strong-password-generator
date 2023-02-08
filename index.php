@@ -1,3 +1,28 @@
+<?php
+
+// Dati
+$data = [
+    'abcdefghilmnopqrstuvz',
+    'ABCDEFGHILMNOPQRSTUVZ',
+    '0123456789',
+    '!/=*$'
+
+];
+
+// recupero la password
+$password_length = $_GET['password_length'] ?? '';
+
+// dichiaro la varibaile password
+$password='';
+for($i = 0;$i<$password_length;$i++){
+    $selezione = rand(0,3);
+    $last=strlen($data[$selezione]) - 1;
+    $password .=$data[$selezione][rand(0,$last)];
+}
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,11 +43,14 @@
 
     <main class="small-container mt-5 ">
         <p>Lunghezza Password</p>
-        <form action="password_generator">
-            <input type="text">
+        <form action="" method="GET">
+            <input type="number" name="password_length">
             <button class="btn btn-primary">Invia</button>
-            <button class="btn btn-secondary">annulla</button>
+            <button type="submit" class="btn btn-secondary">annulla</button>
+            
         </form>
+
+        <h3><?=$password?></h2>
     </main>
 
 </body>
